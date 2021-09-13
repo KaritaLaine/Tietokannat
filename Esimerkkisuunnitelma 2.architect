@@ -36,13 +36,10 @@
   <table id="TAB7" populated="true" UUID="07bbda88-d178-4aeb-a157-8b7bfe7415c2" name="Tuote" objectType="TABLE" physicalName="tuote" >
    <remarks></remarks>
    <folder id="FOLTAB71" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL8" populated="true" UUID="23dde9e4-704f-44ff-82f7-0750f03e8ac7" autoIncrement="true" autoIncrementSequenceName="tuote_yksilotunnus_seq" defaultValue="" name="Yksilötunnus" nullable="0" physicalName="yksilotunnus" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL8" populated="true" UUID="23dde9e4-704f-44ff-82f7-0750f03e8ac7" autoIncrement="true" autoIncrementSequenceName="tuote_yksilointitunnus_seq" defaultValue="" name="Yksilöintitunnus" nullable="0" physicalName="yksilointitunnus" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL9" populated="true" UUID="3a656200-a741-492f-8de6-46898cfda0b4" autoIncrement="false" autoIncrementSequenceName="tuote_nimike_seq" defaultValue="" name="Nimike" nullable="0" physicalName="nimike" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
-    </column>
-    <column id="COL10" populated="true" UUID="8e58c988-59c8-44fc-adc3-1403d40ed035" autoIncrement="false" autoIncrementSequenceName="asiakas_asiakasnumero_seq" defaultValue="" name="Asiakasnumero" nullable="0" physicalName="asiakasnumero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -51,14 +48,40 @@
     <folder id="FOLTAB72" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB74" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX11" populated="true" UUID="749bbf9d-c0f6-4e42-b21b-027e50cd09f7" clustered="false" name="tuote_pk" physicalName="tuote_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC12" populated="true" UUID="5dbe9f5c-8988-4022-8d07-f42b4b608a67" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="Yksilötunnus" physicalName="yksilotunnus" />
+    <index id="IDX10" populated="true" UUID="749bbf9d-c0f6-4e42-b21b-027e50cd09f7" clustered="false" name="tuote_pk" physicalName="tuote_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC11" populated="true" UUID="5dbe9f5c-8988-4022-8d07-f42b4b608a67" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="Yksilöintitunnus" physicalName="yksilointitunnus" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB12" populated="true" UUID="feae6fe8-9783-4654-aa7a-59da8c4b51f2" name="Vuokraus" objectType="TABLE" physicalName="vuokraus" >
+   <remarks></remarks>
+   <folder id="FOLTAB121" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL13" populated="true" UUID="d64d1a22-880c-46cc-8a71-6f3e4151e25e" autoIncrement="false" autoIncrementSequenceName="vuokraus_vuokrausid_seq" defaultValue="" name="VuokrausID" nullable="0" physicalName="vuokrausid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Dummy -perusavain</remarks>
+    </column>
+    <column id="COL14" populated="true" UUID="72dcfac3-7bed-4a02-a329-3c359003559e" autoIncrement="false" autoIncrementSequenceName="vuokraus_asiakasnumero_seq" defaultValue="" name="Asiakasnumero" nullable="0" physicalName="asiakasnumero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL15" populated="true" UUID="59071b00-9b7a-45a3-843a-508c54f15346" autoIncrement="false" autoIncrementSequenceName="vuokraus_yksilotunnus_seq" defaultValue="" name="Yksilöintitunnus" nullable="0" physicalName="yksilotunnus" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB123" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB122" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB124" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX16" populated="true" UUID="0278ded9-58ce-445b-824e-7231193c5a35" clustered="false" name="vuokraus_pk" physicalName="vuokraus_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC17" populated="true" UUID="618022f4-0867-46cd-9e3a-badf18b9481f" ascendingOrDescending="UNSPECIFIED" column-ref="COL13" name="VuokrausID" physicalName="vuokrausid" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL13" populated="true" UUID="76b854b8-ca74-4c77-a0fa-c6b3093b20a8" deferrability="7" deleteRule="3" fk-table-ref="TAB7" fkCardinality="7" identifying="false" name="asiakas_tuote_fk" physicalName="asiakas_tuote_fk" pk-table-ref="TAB1" pkCardinality="7" updateRule="3" >
-    <column-mapping id="CMP14" populated="true" UUID="7abe85d3-a1b4-4714-b50b-d98a1f5ecc48" fk-column-ref="COL10" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL18" populated="true" UUID="1bbb1342-e85c-4bba-8eb6-60f70fba6a69" deferrability="7" deleteRule="3" fk-table-ref="TAB12" fkCardinality="7" identifying="false" name="asiakas_vuokraus_fk" physicalName="asiakas_vuokraus_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP19" populated="true" UUID="2b363d1b-bcda-47e8-98d1-1ae4b46d4a56" fk-column-ref="COL14" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL20" populated="true" UUID="ffa0f625-b2eb-4f92-970e-4c509a1c4f88" deferrability="7" deleteRule="3" fk-table-ref="TAB12" fkCardinality="7" identifying="false" name="tuote_vuokraus_fk" physicalName="tuote_vuokraus_fk" pk-table-ref="TAB7" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP21" populated="true" UUID="50ef00a2-96e7-4f99-8154-c796cc21b9b6" fk-column-ref="COL15" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL8" />
    </relationship>
   </relationships>
  </target-database>
@@ -66,9 +89,11 @@
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
-  <table-pane table-ref="TAB1" x="194" y="132" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB7" x="493" y="131" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL13" pkConnection="0.36619718309859156" fkConnection="0.9154929577464789" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-pane table-ref="TAB1" x="209" y="132" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB7" x="711" y="133" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB12" x="461" y="109" bgColor="0xc8dccc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL18" pkConnection="0.4225352112676056" fkConnection="0.7464788732394366" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL20" pkConnection="0.6491228070175439" fkConnection="0.8732394366197183" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
