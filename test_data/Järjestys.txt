@@ -1,0 +1,7 @@
+Datanlisäyskriptit pitää suorittaa järjestyksessä:
+1. Asiakas
+2. Yhteystyyppi
+3. Yhteyshenkilo
+4. Tuoteryhma
+5. Tuote
+6. Vuokraus
